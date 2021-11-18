@@ -28,7 +28,7 @@ pipeline {
                         sh 'echo "${GOOGLE_APPLICATION_CREDENTIALS}"' // returns ****
                         sh 'gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS'
                         sh 'gcloud container clusters get-credentials $CLUSTER_NAME --zone $LOCATION --project $PROJECT_ID'
-                        sh 'kubectl set image deployment/clientes-manuelzegarra lab01=mzegarra/java01:1.0.1'
+                        sh 'kubectl set image deployment/clientes-marcomartinez lab01=martinezl/java01'
                     }
                 }
 
